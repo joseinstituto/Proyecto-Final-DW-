@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubre el Mundo - Tu Agencia de Viajes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+    <header class="main-header" id="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> Descubre</a>
+                                    <nav class="main-nav" id="main-nav">
+                            <a href="index.html">Inicio</a>
+                            <a href="destinos.html">Destinos</a>
+                            <a href="servicios.html">Servicios</a>
+                            <a href="promociones.html">Promociones</a>
+                            <a href="acerca.html">Acerca de</a>
+                            <a href="contacto.html">Contacto</a>
+                        </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero-section" id="inicio">
+        <div class="overlay"></div>
+        <div class="video-background">
+            <video autoplay muted loop playsinline poster="#" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:-1;">
+                <source src="https://videos.pexels.com/video-files/29604782/12740993_2560_1440_30fps.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+        <div class="container hero-content">
+            <h1>El Viaje de Tus Sueños Comienza Aquí</h1>
+            <p>Explora destinos increíbles, vive experiencias inolvidables y crea recuerdos que durarán para siempre.</p>
+            <a href="destinos.html" class="cta-button">Ver Destinos</a>
+        </div>
+    </section>
+    
+    <main class="main-content">
+        <!-- Nueva sección de audio -->
+        <section class="section audio-section">
+            <div class="container">
+                <h2 class="section-title">Sonidos del Mundo</h2>
+                <div class="audio-grid">
+                    <div class="audio-card">
+                        <h3>Olas del Mar Caribe</h3>
+                        <audio controls>
+                            <source src="audio01.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p>Relájate con el sonido de las olas del Caribe</p>
+                    </div>
+                    <div class="audio-card">
+                        <h3>Selva Amazónica</h3>
+                        <audio controls>
+                            <source src="audio02.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <p>Escucha los sonidos de la naturaleza amazónica</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section features-section" id="servicios">
+            <div class="container grid grid-3-cols">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3>Playas Paradisíacas</h3>
+                    <p>Relájate en las mejores playas del mundo, con arena blanca y aguas cristalinas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-landmark"></i></div>
+                    <h3>Cultura e Historia</h3>
+                    <p>Sumérgete en ciudades milenarias llenas de arte, arquitectura y tradiciones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-mountain-sun"></i></div>
+                    <h3>Aventura y Naturaleza</h3>
+                    <p>Vive la adrenalina con nuestras experiencias de ecoturismo y deportes de aventura.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section planes-section" id="planes">
+            <div class="container">
+                <h2 class="section-title">Nuestros Planes</h2>
+                <div class="table-responsive">
+                    <table class="planes-table">
+                        <thead>
+                            <tr>
+                                <th>Características</th>
+                                <th>Plan Básico</th>
+                                <th>Plan Premium</th>
+                                <th>Plan VIP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Alojamiento</td>
+                                <td>3 estrellas</td>
+                                <td>4 estrellas</td>
+                                <td>5 estrellas</td>
+                            </tr>
+                            <tr>
+                                <td>Traslados</td>
+                                <td>Aeropuerto</td>
+                                <td>Todos incluidos</td>
+                                <td>Privados</td>
+                            </tr>
+                            <tr>
+                                <td>Guía turístico</td>
+                                <td>Grupo</td>
+                                <td>Grupo pequeño</td>
+                                <td>Privado</td>
+                            </tr>
+                            <tr>
+                                <td>Precio desde</td>
+                                <td>S/. 2,500</td>
+                                <td>S/. 4,500</td>
+                                <td>S/. 7,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="beneficios">
+                    <h3>Beneficios Incluidos</h3>
+                    <ul class="beneficios-list">
+                        <li><i class="fas fa-check"></i> Seguro de viaje internacional</li>
+                        <li><i class="fas fa-check"></i> Asistencia 24/7</li>
+                        <li><i class="fas fa-check"></i> Reservas en restaurantes seleccionados</li>
+                        <li><i class="fas fa-check"></i> Guía turístico certificado</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="destinos">
+            <div class="container">
+                <h2 class="section-title">Destinos Populares</h2>
+                <p class="section-subtitle">Estos son los viajes preferidos por nuestros exploradores. ¿Cuál será tu próxima aventura?</p>
+                <div class="grid destination-grid">
+                    <div class="destination-card">
+                        <img src="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg" alt="París, Francia">
+                        <div class="destination-info">
+                            <h3>París, Francia</h3>
+                            <div class="duration"><i class="far fa-clock"></i> 7 Días / 6 Noches</div>
+                            <p>Descubre la ciudad del amor, sus museos icónicos, su gastronomía y el encanto de sus calles.</p>
+                                                         <div class="destination-footer">
+                                 <span class="destination-price">S/. 4,400</span>
+                                 <a href="contacto.html" class="cta-button">Reservar</a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tokio, Japón">
+                        <div class="destination-info">
+                            <h3>Tokio, Japón</h3>
+                            <div class="duration"><i class="far fa-clock"></i> 10 Días / 9 Noches</div>
+                            <p>Explora la fascinante dualidad de Tokio, donde la tradición milenaria se encuentra con la tecnología futurista.</p>
+                                                         <div class="destination-footer">
+                                 <span class="destination-price">S/. 9,200</span>
+                                 <a href="contacto.html" class="cta-button">Reservar</a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Machu Picchu, Perú">
+                        <div class="destination-info">
+                            <h3>Machu Picchu, Perú</h3>
+                            <div class="duration"><i class="far fa-clock"></i> 8 Días / 7 Noches</div>
+                            <p>Conquista la ciudadela inca perdida en los Andes. Una maravilla del mundo que te dejará sin aliento.</p>
+                                                         <div class="destination-footer">
+                                 <span class="destination-price">S/. 6,600</span>
+                                 <a href="contacto.html" class="cta-button">Reservar</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========= SECCIÓN DE VIDEO CAROUSEL ========= -->
+        <section class="section video-carousel-section" id="experiencias">
+            <div class="container">
+                <h2 class="section-title">Experiencias Inolvidables</h2>
+                <p class="section-subtitle">Descubre el mundo a través de nuestros ojos. Cada viaje, una historia única.</p>
+                <div class="video-carousel-container">
+                    <button class="carousel-arrow left" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                    <div class="video-carousel-wrapper">
+                        <div class="video-card" data-index="0">
+                            <div class="video-poster" style="background-image: url('https://images.pexels.com/videos/856056/free-video-856056.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');"></div>
+                            <video class="card-video" muted loop playsinline preload="metadata">
+                                <source src="https://videos.pexels.com/video-files/856056/856056-hd_1920_1080_30fps.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-overlay">
+                                <h3>París, Francia</h3>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-card" data-index="1">
+                            <div class="video-poster" style="background-image: url('https://images.pexels.com/videos/5396795/free-video-5396795.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500');"></div>
+                            <video class="card-video" muted loop playsinline preload="metadata">
+                                <source src="https://videos.pexels.com/video-files/5396795/5396795-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-overlay">
+                                <h3>Zhangjiajie, China</h3>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-card" data-index="2">
+                            <div class="video-poster" style="background-image: url('https://images.pexels.com/videos/5057526/pexels-photo-5057526.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');"></div>
+                            <video class="card-video" muted loop playsinline preload="metadata">
+                                <source src="https://videos.pexels.com/video-files/5057526/5057526-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                            </video>
+                            <div class="card-overlay">
+                                <h3>Dubái, EAU</h3>
+                                <div class="progress-bar-wrapper">
+                                    <div class="progress-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+        <!-- ========= FIN DE LA SECCIÓN DE VIDEO CAROUSEL ========= -->
+
+        <section class="section testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Opiniones de Viajeros</h2>
+                <div class="grid grid-3-cols">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>El viaje a París fue mágico. La organización de 'Descubre el Mundo' fue impecable. ¡Servicio de primera!</p>
+                        <cite>- María González</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Nuestro tour por Japón superó todas las expectativas. Los guías eran expertos y muy amables. ¡Volveremos a viajar con ellos!</p>
+                        <cite>- Carlos Jimenez</cite>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>Visitar Machu Picchu siempre fue mi sueño y gracias a esta agencia se hizo realidad de la mejor manera. ¡Experiencia inolvidable!</p>
+                        <cite>- Sofía Rodriguez</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer" id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-globe-americas"></i> Descubre el Mundo</h3>
+                <p>Tu agencia de viajes de confianza. Diseñamos experiencias, no solo viajes. Desde 2010 creando recuerdos inolvidables.</p>
+                <div class="social-links">
+                                         <a href="https://facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                     <a href="https://twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                    <li><a href="contactos.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Famesa, Lima, Perú</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@descubreelmundo.com">info@descubreelmundo.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+5115551234">+51 976503073</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Descubre el Mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.getElementById('main-header');
+            const navToggle = document.getElementById('nav-toggle');
+            const mainNav = document.getElementById('main-nav');
+
+            // Sticky header
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile menu toggle
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                });
+            }
+
+            // ====== VIDEO CAROUSEL LOGIC ======
+            const carouselSection = document.querySelector('.video-carousel-section');
+            if (carouselSection) {
+                const carouselContainer = document.querySelector('.video-carousel-container');
+                const cards = document.querySelectorAll('.video-card');
+                let currentIndex = 0;
+                let carouselInterval;
+                let isCarouselRunning = false;
+                const VIDEO_DURATION = 10000; // 10 segundos
+
+                const updateCarouselPositions = () => {
+                    cards.forEach((card, index) => {
+                        card.classList.remove('active', 'is-prev', 'is-next', 'is-hidden', 'is-playing');
+
+                        const video = card.querySelector('.card-video');
+                        const progressBarFill = card.querySelector('.progress-bar-fill');
+                        
+                        // Reset video and progress bar
+                        if (video) {
+                            video.pause();
+                            video.currentTime = 0;
+                        }
+                        if (progressBarFill) {
+                            progressBarFill.style.transition = 'none';
+                            progressBarFill.style.width = '0%';
+                            // Force reflow to apply the reset immediately
+                            void progressBarFill.offsetWidth; 
+                            progressBarFill.style.transition = 'width 10s linear';
+                        }
+
+                        // Asignar clases de posición
+                        if (index === currentIndex) {
+                            card.classList.add('active');
+                        } else if (index === (currentIndex - 1 + cards.length) % cards.length) {
+                            card.classList.add('is-prev');
+                        } else if (index === (currentIndex + 1) % cards.length) {
+                            card.classList.add('is-next');
+                        } else {
+                            card.classList.add('is-hidden');
+                        }
+                    });
+
+                    const activeCard = document.querySelector('.video-card.active');
+                    const activeVideo = activeCard.querySelector('.card-video');
+                    const activeProgressBar = activeCard.querySelector('.progress-bar-fill');
+                    if (activeVideo) {
+                        activeVideo.play().then(() => {
+                            activeCard.classList.add('is-playing');
+                            if (activeProgressBar) {
+                                activeProgressBar.style.width = '100%';
+                            }
+                        }).catch(error => {
+                            console.error("Error al intentar reproducir el video:", error);
+                        });
+                    }
+                };
+
+                const startCarousel = () => {
+                    if (isCarouselRunning) return;
+                    isCarouselRunning = true;
+                    
+                    updateCarouselPositions();
+
+                    carouselInterval = setInterval(() => {
+                        currentIndex = (currentIndex + 1) % cards.length;
+                        updateCarouselPositions();
+                    }, VIDEO_DURATION);
+                };
+
+                const stopCarousel = () => {
+                    clearInterval(carouselInterval);
+                    isCarouselRunning = false;
+                    cards.forEach(card => {
+                        const video = card.querySelector('.card-video');
+                        if (video) video.pause();
+                        card.classList.remove('is-playing');
+                    });
+                };
+
+                // Intersection Observer para iniciar animación y carrusel
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            carouselContainer.classList.add('visible');
+                            startCarousel();
+                        } else {
+                            stopCarousel();
+                        }
+                    });
+                }, { threshold: 0.5 }); 
+
+                observer.observe(carouselSection);
+                
+                // Click en tarjetas laterales para cambiar de video
+                cards.forEach(card => {
+                    card.addEventListener('click', () => {
+                        if (!card.classList.contains('active')) {
+                            currentIndex = parseInt(card.dataset.index);
+                            clearInterval(carouselInterval); // Detener ciclo actual
+                            isCarouselRunning = false;
+                            startCarousel(); // Reiniciar ciclo desde la tarjeta seleccionada
+                        }
+                    });
+                });
+                // Flechas de navegación
+                const leftArrow = document.querySelector('.carousel-arrow.left');
+                const rightArrow = document.querySelector('.carousel-arrow.right');
+                if (leftArrow && rightArrow) {
+                    leftArrow.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                        clearInterval(carouselInterval);
+                        isCarouselRunning = false;
+                        startCarousel();
+                    });
+                    rightArrow.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        currentIndex = (currentIndex + 1) % cards.length;
+                        clearInterval(carouselInterval);
+                        isCarouselRunning = false;
+                        startCarousel();
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
