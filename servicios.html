@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Descubre el Mundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> Descubre</a>
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="servicios.html" class="active">Servicios</a>
+                <a href="promociones.html">Promociones</a>
+                <a href="acerca.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Servicios</h1>
+                <p>Diseñamos cada detalle de tu viaje para que tu única preocupación sea disfrutar.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">¿Qué Ofrecemos?</h2>
+                <p class="section-subtitle">Desde paquetes completos hasta reservas individuales, tenemos todo lo que necesitas para tu próxima aventura.</p>
+                <div class="grid grid-3-cols">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-box-open"></i></div>
+                        <h3>Paquetes Turísticos</h3>
+                        <p>Soluciones todo incluido para que no te preocupes por nada: vuelos, hoteles, tours y más.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-plane-departure"></i></div>
+                        <h3>Reserva de Vuelos</h3>
+                        <p>Encontramos las mejores tarifas y conexiones para llevarte a cualquier parte del mundo.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-hotel"></i></div>
+                        <h3>Alojamiento de Lujo</h3>
+                        <p>Seleccionamos los mejores hoteles, resorts y estancias únicas para garantizar tu comodidad.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-car"></i></div>
+                        <h3>Transporte Privado</h3>
+                        <p>Gestionamos alquiler de coches y traslados privados para que te muevas con total libertad.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-user-friends"></i></div>
+                        <h3>Guías Expertos</h3>
+                        <p>Tours privados y grupales con guías locales que te mostrarán los secretos de cada destino.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Seguros de Viaje</h3>
+                        <p>Viaja con tranquilidad. Ofrecemos cobertura completa para cualquier imprevisto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-globe-americas"></i> Descubre el Mundo</h3>
+                <p>Tu agencia de viajes de confianza. Desde 2010 creando recuerdos inolvidables.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                    <li><a href="contactos.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Famesa, Lima, Perú</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@descubreelmundo.com">info@descubreelmundo.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+5115551234">+51 976503073</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Descubre el Mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const mainNav = document.getElementById('main-nav');
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - Descubre el Mundo</title>
+    <!-- Iconos Font Awesome (igual que en index.html) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuentes (igual que en index.html) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Iconos Feather (para los detalles de las tarjetas) -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> Descubre</a>
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html" class="active">Destinos</a>
+                <a href="servicios.html">Servicios</a>
+                                            <a href="promociones.html">Promociones</a>
+                <a href="acerca.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Destinos</h1>
+                <p>Encuentra tu próxima gran aventura. Filtra por continente, precio y duración para planificar el viaje perfecto.</p>
+            </div>
+        </section>
+
+        <div class="destinos-page-layout container">
+            <!-- Sidebar Izquierdo -->
+            <aside class="sidebar">
+                <div class="sidebar-box">
+                    <h3 class="sidebar-box__title">Filtrar Destinos</h3>
+                    <form class="filter-form" id="filter-form">
+                        <div class="form-group">
+                            <label for="continente" class="form-label">Continente:</label>
+                            <select id="continente" name="continente" class="form-select">
+                                <option value="all">Todos</option>
+                                <option value="europa">Europa</option>
+                                <option value="asia">Asia</option>
+                                <option value="america">América</option>
+                                <option value="africa">África</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="precio" class="form-label">Precio máximo:</label>
+                                                          <input type="range" id="precio" min="1850" max="18500" value="18500" step="370">
+                            <span id="precio-valor">S/. 18,500</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="duracion" class="form-label">Duración (días):</label>
+                            <select id="duracion" name="duracion" class="form-select">
+                                <option value="all">Cualquiera</option>
+                                <option value="5">1-5 días</option>
+                                <option value="10">6-10 días</option>
+                                <option value="11">11+ días</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </aside>
+
+            <!-- Contenido Principal Central -->
+            <section class="main-destinos">
+                <div class="grid destinos-grid" id="destinos-container">
+                    <!-- Los destinos se cargarán aquí -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer" id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-globe-americas"></i> Descubre el Mundo</h3>
+                <p>Tu agencia de viajes de confianza. Diseñamos experiencias, no solo viajes. Desde 2010 creando recuerdos inolvidables.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                   <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                    <li><a href="contactos.html">Contáctanos</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Famesa, Lima, Perú</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@descubreelmundo.com">info@descubreelmundo.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+5115551234">+51 976503073</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Descubre el Mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica del menú móvil
+            const navToggle = document.getElementById('nav-toggle');
+            const mainNav = document.getElementById('main-nav');
+            if (navToggle) {
+                navToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('active');
+                });
+            }
+            
+            // Datos de los destinos
+            const destinos = [
+                {
+                    continente: "europa", precio: 4440, duracion: 7,
+                    img: "https://images.pexels.com/photos/2082103/pexels-photo-2082103.jpeg",
+                    titulo: "París, Francia",
+                    desc: "La ciudad del amor te espera con su Torre Eiffel, el Louvre y su exquisita gastronomía.",
+                    epoca: "Primavera"
+                },
+                {
+                    continente: "europa", precio: 5180, duracion: 8,
+                    img: "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                    titulo: "Roma, Italia",
+                    desc: "Descubre la historia del Imperio Romano en el Coliseo, el Foro Romano y el Vaticano.",
+                    epoca: "Otoño"
+                },
+                {
+                    continente: "asia", precio: 9250, duracion: 10,
+                    img: "https://img.kwcdn.com/product/open/46d9f6b66e284eb5af0791a9af06df5e-goods.jpeg?imageView2/2/w/800/q/70/format/webp",
+                    titulo: "Tokio, Japón",
+                    desc: "Una mezcla perfecta de tradición y modernidad en la vibrante capital japonesa.",
+                    epoca: "Primavera"
+                },
+                {
+                    continente: "asia", precio: 6660, duracion: 9,
+                    img: "https://i.pinimg.com/1200x/8d/d8/c6/8dd8c61614f4e2ea583f320b0876e3bd.jpg",
+                    titulo: "Bangkok, Tailandia",
+                    desc: "Explora templos budistas, mercados flotantes y la increíble cultura tailandesa.",
+                    epoca: "Nov-Mar"
+                },
+                {
+                    continente: "america", precio: 7030, duracion: 8,
+                    img: "https://i.pinimg.com/1200x/72/af/ca/72afcae3b7f498fb166e831d78032e44.jpg",
+                    titulo: "Machu Picchu, Perú",
+                    desc: "La ciudad perdida de los Incas, una de las siete maravillas del mundo moderno.",
+                    epoca: "May-Oct"
+                },
+                {
+                    continente: "america", precio: 8140, duracion: 7,
+                    img: "https://images.pexels.com/photos/2190283/pexels-photo-2190283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                    titulo: "Nueva York, USA",
+                    desc: "La ciudad que nunca duerme te espera con sus rascacielos y espectáculos de Broadway.",
+                    epoca: "Otoño"
+                },
+                {
+                    continente: "africa", precio: 5550, duracion: 6,
+                    img: "https://images.pexels.com/photos/3579245/pexels-photo-3579245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+                    titulo: "Marrakech, Marruecos",
+                    desc: "Sumérgete en la cultura árabe en las medinas, zocos y jardines de Marrakech.",
+                    epoca: "Mar-May"
+                },
+                {
+                    continente: "africa", precio: 11840, duracion: 12,
+                    img: "https://i.pinimg.com/1200x/36/11/56/361156f146c96d99794a430c1b97fa95.jpg",
+                    titulo: "Safari en Kenia",
+                    desc: "Vive la aventura de un safari africano y observa la gran migración en el Masai Mara.",
+                    epoca: "Jul-Oct"
+                }
+            ];
+
+            const filterForm = document.getElementById('filter-form');
+            const priceSlider = document.getElementById('precio');
+            const priceValue = document.getElementById('precio-valor');
+            const destinosContainer = document.getElementById('destinos-container');
+
+            function renderDestinos(destinosFiltrados) {
+                destinosContainer.innerHTML = '';
+                if (destinosFiltrados.length === 0) {
+                    destinosContainer.innerHTML = `<p>No se encontraron destinos con los filtros seleccionados.</p>`;
+                    return;
+                }
+
+                destinosFiltrados.forEach(destino => {
+                    const card = document.createElement('article');
+                    card.className = 'destino-card';
+                    card.innerHTML = `
+                        <img src="${destino.img}" alt="${destino.titulo}" class="destino-card__image">
+                        <div class="destino-card__content">
+                            <h4 class="destino-card__title">${destino.titulo}</h4>
+                            <p class="destino-card__description">${destino.desc}</p>
+                            <ul class="destino-card__details">
+                                <li><i data-feather="clock"></i> ${destino.duracion} días</li>
+                                <li><i data-feather="dollar-sign"></i> S/. ${destino.precio.toLocaleString()}</li>
+                                <li><i data-feather="cloud"></i> Mejor época: ${destino.epoca}</li>
+                            </ul>
+                            <a href="contacto.html" class="button">Reservar Ahora</a>
+                        </div>
+                    `;
+                    destinosContainer.appendChild(card);
+                });
+                feather.replace(); // Volver a renderizar los íconos
+            }
+
+            function filterDestinos() {
+                const continente = document.getElementById('continente').value;
+                const precioMax = parseInt(priceSlider.value);
+                const duracion = document.getElementById('duracion').value;
+
+                priceValue.textContent = `S/. ${precioMax.toLocaleString()}`;
+                
+                const resultados = destinos.filter(destino => {
+                    const matchContinente = continente === 'all' || destino.continente === continente;
+                    const matchPrecio = destino.precio <= precioMax;
+                    
+                    let matchDuracion = true;
+                    if (duracion !== 'all') {
+                        if (duracion === '5') matchDuracion = destino.duracion <= 5;
+                        else if (duracion === '10') matchDuracion = destino.duracion >= 6 && destino.duracion <= 10;
+                        else if (duracion === '11') matchDuracion = destino.duracion >= 11;
+                    }
+
+                    return matchContinente && matchPrecio && matchDuracion;
+                });
+                
+                renderDestinos(resultados);
+            }
+
+            filterForm.addEventListener('input', filterDestinos);
+            renderDestinos(destinos); // Render inicial de todos los destinos
+        });
+    </script>
+</body>
+</html>

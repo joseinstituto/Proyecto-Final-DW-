@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Descubre el Mundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-globe-americas"></i> Descubre</a>
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="destinos.html">Destinos</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="promociones.html">Promociones</a>
+                <a href="acerca.html">Acerca de</a>
+                <a href="contacto.html" class="active">Contacto</a>
+            </nav>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="contact-layout">
+                    <div class="contact-info-box">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Av. Famesa, Lima, Perú</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@descubreelmundo.com">info@descubreelmundo.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p><a href="tel:+51976503073">+51 976503073</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                                <p>Sábado: 9:00 - 13:00</p>
+                            </div>
+                        </div>
+
+                        <div class="map-section">
+                            <h3><i class="fas fa-map-marked-alt"></i> Nuestra Ubicación</h3>
+                            <div class="map-container">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.939434857503!2d-77.0363833851873!3d-12.04637499146927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b5d3aaf21f%3A0x8e8e6b365a4e1e07!2sPlaza%20Mayor%2C%20Lima%2015001%2C%20Per%C3%BA!5e0!3m2!1ses-419!2sus!4v1672534578901!5m2!1ses-419!2sus" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            <div class="map-info">
+                                <div class="map-detail">
+                                    <i class="fas fa-building"></i>
+                                    <span>Oficina Principal</span>
+                                </div>
+                                <div class="map-detail">
+                                    <i class="fas fa-subway"></i>
+                                    <span>Cerca a Estación Plaza Mayor</span>
+                                </div>
+                                <div class="map-detail">
+                                    <i class="fas fa-parking"></i>
+                                    <span>Estacionamiento disponible</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <h2>Envíanos un Mensaje</h2>
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Por favor ingrese solo letras">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" title="Ingrese un número de 9 dígitos">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destino">Destino de Interés</label>
+                            <select id="destino" name="destino">
+                                <option value="">Seleccione un destino</option>
+                                <option value="europa">Europa</option>
+                                <option value="asia">Asia</option>
+                                <option value="america">América</option>
+                                <option value="oceania">Oceanía</option>
+                                <option value="africa">África</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fecha">Fecha Tentativa de Viaje</label>
+                            <input type="date" id="fecha" name="fecha" min="2025-08-12">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="presupuesto">Presupuesto Aproximado</label>
+                            <select id="presupuesto" name="presupuesto">
+                                <option value="">Seleccione un rango</option>
+                                <option value="2000-4000">S/. 2,000 - 4,000</option>
+                                <option value="4000-6000">S/. 4,000 - 6,000</option>
+                                <option value="6000-8000">S/. 6,000 - 8,000</option>
+                                <option value="8000+">Más de S/. 8,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" required
+                                minlength="10" rows="5"></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Deseo recibir ofertas y novedades</label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="terminos">Acepto los términos y condiciones *</label>
+                        </div>
+
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3><i class="fas fa-globe-americas"></i> Descubre el Mundo</h3>
+                <p>Tu agencia de viajes de confianza. Desde 2025 creando recuerdos inolvidables.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Navegación</h3>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="acerca.html">Acerca de Nosotros</a></li>
+                    <li><a href="contactos.html">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Famesa, Lima, Perú</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@descubreelmundo.com">info@descubreelmundo.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+5115551234">+51 976503073</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Descubre el Mundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const mainNav = document.getElementById('main-nav');
+            if (navToggle) {
+                navToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
